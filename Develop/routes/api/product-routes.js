@@ -105,7 +105,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
     res.status(200).json(deletedProduct);
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ message: "Could not remove the product." });
   }
 });
