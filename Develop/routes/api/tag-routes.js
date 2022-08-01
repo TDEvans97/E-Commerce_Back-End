@@ -30,8 +30,8 @@ router.get('/:id', async (req, res) => {
 // Create a new tag
 router.post('/', async (req, res) => {
   try { 
-    const tagData = await Tag.create(req.body);
-    res.status(200).json(tagData);
+    const createTag = await Tag.create(req.body);
+    res.status(200).json(createTag);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -40,12 +40,12 @@ router.post('/', async (req, res) => {
 // Update tag name by ID
 router.put('/:id', async (req, res) => {
   try {
-    const tagData = await Tag.update(req.body, {
+    const updateTag = await Tag.update(req.body, {
       where: {
         id: req.params.id,
       }
     });
-    res.status(200).json(tagData);
+    res.status(200).json(updateTag);
   } catch (error) {
     res.status(400).json({ message: "Failed to update the tag." })
   }
@@ -54,12 +54,12 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // Delete tag by ID
   try {
-    const tagData = await Tag.destroy({
+    const deleteTag = await Tag.destroy({
       where: {
         id: req.params.id,
       }
     });
-    res.status(200).json(tagData);
+    res.status(200).json(deleteTag);
   } catch (error) {
     res.status(400).json({ message: "Failed to delete the tag." })
   }
