@@ -9,7 +9,7 @@
   + [Test Instructions](#test-instructions)
   + [Questions](#questions)
   ## Description
-  This E-commerce back-end application demonstrates the fundamental architecture of e-commerce sites. It is build upon an Express.js API that has been configured to use Sequelize to communicate with a MySQL database. 
+  This E-commerce back-end application demonstrates the fundamental architecture of e-commerce sites. It is built upon an Express.js API that has been configured to use Sequelize to communicate with a MySQL database. 
   ## Installation Instructions
   Please clone it down the repo. `npm init` to install all dependencies. Run the schema in a database management tool. After the local database has been created, use the command `npm run seed` in the terminal to seed the database. Now that your local database is configured, use the command `npm start` to execute the code and start the server. After this is completed, you may test and validate the results of REST API methods on the database in a REST API client like Insomnia or Postman.
   ## License 
